@@ -80,9 +80,9 @@ object ArrayTypeExample {
     df.select(col("name"), slice(col("languagesAtSchool"), 3, 2).alias("slice")).show(false)
 
     val arrayArrayData = Seq(
-      Row("James",List(List("Java","Scala","C++"),List("Spark","Java"),List("Spark","Java"))),
-      Row("Michael",List(List("Spark","Java","C++"),List("Spark","Java"))),
-      Row("Robert",List(List("CSharp","VB"),List("Spark","Python")))
+      Row("James", List(List("Java", "Scala", "C++"), List("Spark", "Java"), List("Spark", "Java"))),
+      Row("Michael", List(List("Spark", "Java", "C++"), List("Spark", "Java"))),
+      Row("Robert", List(List("CSharp", "VB"), List("Spark", "Python")))
     )
 
     val arrayArraySchema = new StructType()
@@ -99,15 +99,15 @@ object ArrayTypeExample {
     ).select($"name", posexplode($"languages")).show(false)
 
 
-    val simpleData = Seq(("James","Sales",3000),
-      ("Michael","Sales",4600),
-      ("Robert","Sales",4100),
-      ("Maria","Finance",3000),
-      ("Jen","Finance",3000),
-      ("Jen","Finance",3300),
-      ("Jen","Finance",3900),
-      ("Jen","Marketing",3000),
-      ("Jen","Marketing",2000)
+    val simpleData = Seq(("James", "Sales", 3000),
+      ("Michael", "Sales", 4600),
+      ("Robert", "Sales", 4100),
+      ("Maria", "Finance", 3000),
+      ("Jen", "Finance", 3000),
+      ("Jen", "Finance", 3300),
+      ("Jen", "Finance", 3900),
+      ("Jen", "Marketing", 3000),
+      ("Jen", "Marketing", 2000)
     )
 
     simpleData.toDF("name", "department", "salary")
@@ -118,9 +118,6 @@ object ArrayTypeExample {
         sum($"salary").alias("sum_salary"),
         max($"salary").alias("max_salary"),
         min($"salary").alias("min_salary")
-    ).show(false)
-
-    simpleData.toDF("name", "department", "salary")
-      .re
+      ).show(false)
   }
 }
