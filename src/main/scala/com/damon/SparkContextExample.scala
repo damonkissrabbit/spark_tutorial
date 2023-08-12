@@ -31,6 +31,6 @@ object SparkContextExample {
 
     df.createOrReplaceTempView("TAB")
     sqlContext.sql("select * from TAB").show(false)
-    spark.sql("select * from TAB").show(false)
+//    spark.sql("select * from TAB").show(false)
   }
 }
