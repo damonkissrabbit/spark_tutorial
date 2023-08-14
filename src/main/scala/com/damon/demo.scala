@@ -1,36 +1,30 @@
 package com.damon
 
-import org.apache.spark.sql.{SQLContext, SparkSession}
-
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions._
 
 object demo {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder()
-      .master("local[1]")
-      .appName("SparkContextExample")
+      .appName("demo")
+      .master("local[*]")
       .getOrCreate()
 
-    spark.sparkContext.setLogLevel("ERROR")
+    import spark.implicits._
 
-    val sqlContext: SQLContext = spark.sqlContext
+    val data = Seq(
+      ("damon", 25),
+      ("yuyu", 18)
+    )
 
-    val df = sqlContext
-      .read
-      .options(
-        Map(
-          "inferSchema" -> "true",
-          "delimiter" -> ",",
-          "header" -> "true"
-        )
-      )
-      .csv("src/main/resources/zipcodes.csv")
-
-    df.show()
+    val schema = Array("name", "age")
+    val df = data.toDF(schema:_*)
     df.printSchema()
+    df.show(false)
 
-    df.createOrReplaceTempView("TAB")
-    sqlContext.sql("select * from TAB").show(false)
-//    spark.sql("select * from TAB").show(false)
+    df.withColumn(
+      "lit", lit("love")
+    ).show(false)
   }
 }
