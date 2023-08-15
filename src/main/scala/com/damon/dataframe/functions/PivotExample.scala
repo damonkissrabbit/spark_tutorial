@@ -20,10 +20,10 @@ object PivotExample {
     import spark.sqlContext.implicits._
     val df = data.toDF("Product", "Amount", "Country")
     df.show()
-
-    df.groupBy("Product", "Country")
-      .sum("Amount")
-      .show(false)
+//
+//    df.groupBy("Product", "Country")
+//      .sum("Amount")
+//      .show(false)
 
     df.groupBy("Product", "Country")
       .sum("Amount")
