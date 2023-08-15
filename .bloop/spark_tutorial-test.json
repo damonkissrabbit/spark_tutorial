@@ -13,6 +13,8 @@
         "classpath": [
             "/Users/damon/projects/vscode/scala/spark_tutorial/target/test-classes",
             "/Users/damon/projects/vscode/scala/spark_tutorial/target/classes",
+            "/Users/damon/.m2/repository/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar",
+            "/Users/damon/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar",
             "/Users/damon/.m2/repository/org/scala-lang/scala-library/2.12.12/scala-library-2.12.12.jar",
             "/Users/damon/.m2/repository/org/specs/specs/1.2.5/specs-1.2.5.jar",
             "/Users/damon/.m2/repository/junit/junit/4.4/junit-4.4.jar",
@@ -165,7 +167,6 @@
             "/Users/damon/.m2/repository/com/google/flatbuffers/flatbuffers-java/1.9.0/flatbuffers-java-1.9.0.jar",
             "/Users/damon/.m2/repository/org/apache/orc/orc-core/1.5.10/orc-core-1.5.10.jar",
             "/Users/damon/.m2/repository/org/apache/orc/orc-shims/1.5.10/orc-shims-1.5.10.jar",
-            "/Users/damon/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar",
             "/Users/damon/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar",
             "/Users/damon/.m2/repository/io/airlift/aircompressor/0.10/aircompressor-0.10.jar",
             "/Users/damon/.m2/repository/org/threeten/threeten-extra/1.5.0/threeten-extra-1.5.0.jar",
@@ -1187,22 +1188,6 @@
                     ]
                 },
                 {
-                    "organization": "com.google.protobuf",
-                    "name": "protobuf-java",
-                    "version": "2.5.0",
-                    "artifacts": [
-                        {
-                            "name": "protobuf-java",
-                            "path": "/Users/damon/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar"
-                        },
-                        {
-                            "name": "protobuf-java",
-                            "classifier": "sources",
-                            "path": "/Users/damon/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0-sources.jar"
-                        }
-                    ]
-                },
-                {
                     "organization": "com.ning",
                     "name": "compress-lzf",
                     "version": "1.0.3",
@@ -1247,6 +1232,22 @@
                             "name": "jackson-mapper-asl",
                             "classifier": "sources",
                             "path": "/Users/damon/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.protobuf",
+                    "name": "protobuf-java",
+                    "version": "3.11.4",
+                    "artifacts": [
+                        {
+                            "name": "protobuf-java",
+                            "path": "/Users/damon/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar"
+                        },
+                        {
+                            "name": "protobuf-java",
+                            "classifier": "sources",
+                            "path": "/Users/damon/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4-sources.jar"
                         }
                     ]
                 },
@@ -2754,6 +2755,22 @@
                             "name": "javassist",
                             "classifier": "sources",
                             "path": "/Users/damon/.m2/repository/org/javassist/javassist/3.25.0-GA/javassist-3.25.0-GA-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "mysql",
+                    "name": "mysql-connector-java",
+                    "version": "8.0.28",
+                    "artifacts": [
+                        {
+                            "name": "mysql-connector-java",
+                            "path": "/Users/damon/.m2/repository/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar"
+                        },
+                        {
+                            "name": "mysql-connector-java",
+                            "classifier": "sources",
+                            "path": "/Users/damon/.m2/repository/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28-sources.jar"
                         }
                     ]
                 },
