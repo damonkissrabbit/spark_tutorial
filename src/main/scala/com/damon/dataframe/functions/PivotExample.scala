@@ -21,6 +21,18 @@ object PivotExample {
     val df = data.toDF("Product", "Amount", "Country")
     df.show()
 
+    df.groupBy("Product", "Country")
+      .sum("Amount")
+      .show(false)
 
+    df.groupBy("Product", "Country")
+      .sum("Amount")
+      .groupBy("Product")
+      .pivot("Country")
+      .sum("sum(Amount)").show(false)
+
+    val countries = Seq("Canada","China","Mexico","USA")
+    df.groupBy("Product")
+      .pivot("Country", countries).sum("Amount").show(false)
   }
 }
