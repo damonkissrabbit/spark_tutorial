@@ -13,8 +13,8 @@ object JDBCSource {
 //    spu_info
     spark.read
       .format("jdbc")
-      .option("driver", "com.mysql.jdbc.Driver")
-      .option("url", "jdbc:mysql://192.168.0.114:3306/gmail_flink")
+      .option("driver", "com.mysql.cj.jdbc.Driver")
+      .option("url", "jdbc:mysql://127.0.0.1:3306/gmall_flink")
       .option("dbtable", "spu_info")
       .option("user", "root")
       .option("password", "123")
